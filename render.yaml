@@ -2,13 +2,10 @@ services:
   - type: web
     name: vhymn
     env: python
+    buildCommand: poetry install
+    startCommand: poetry run python app.py
     plan: free
-    region: oregon  # or frankfurt, etc.
+    region: oregon
     branch: main
     autoDeploy: true
     pythonVersion: 3.10.13
-    buildCommand: poetry install
-    startCommand: poetry run python app.py
-    envVars:
-      - key: PORT
-        value: 10000
