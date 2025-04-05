@@ -1,22 +1,14 @@
 services:
   - type: web
-    name: Vhymn
+    name: vhymn
     env: python
     plan: free
-    buildCommand: poetry install
-    startCommand: poetry run python app/main.py
     region: oregon  # or frankfurt, etc.
     branch: main
     autoDeploy: true
-
-services:
-  - type: web
-    name: your-fastapi-app
-    env: python
+    pythonVersion: 3.10.13
     buildCommand: poetry install
-    startCommand: poetry run uvicorn main:app --host 0.0.0.0 --port 10000
-    plan: free
+    startCommand: poetry run python app.py
     envVars:
       - key: PORT
         value: 10000
-
