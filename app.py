@@ -4,6 +4,15 @@ import os
 import uuid
 from werkzeug.utils import secure_filename
 
+from fastapi import FastAPI
+
+fastapp = FastAPI()
+
+@fastapp.get("/")
+def root():
+    return {"message": "Hello from Render!"}
+
+
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 UPLOAD_FOLDER = 'uploads'
