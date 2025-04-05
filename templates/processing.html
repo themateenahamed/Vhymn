@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Processing...</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+  <script>
+    setTimeout(function() {
+      window.location.href = "/result";
+    }, 6000); // fake wait for 6 sec
+  </script>
+</head>
+<body style="display: flex; justify-content: center; align-items: center; height: 100vh; background: #0e0e0e;">
+  <div id="lottie" style="width: 400px; height: 400px;"></div>
+  <script>
+    lottie.loadAnimation({
+      container: document.getElementById('lottie'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: '/static/lottie/animation.json' // your Lottie JSON here
+    });
+  </script>
+</body>
+</html>

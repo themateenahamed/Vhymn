@@ -1,0 +1,4 @@
+flask
+spleeter
+tensorflow
+gunicorn
