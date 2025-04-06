@@ -5,7 +5,7 @@ description = ""
 authors = ["Mateen Ahamed"]
 
 [tool.poetry.dependencies]
-python = ">=3.10,<3.11"
+python = ">=3.10,<3.12"
 fastapi = "0.95.0"
 uvicorn = { extras = ["standard"], version = "^0.29.0" }
 spleeter = "^2.3.0"
