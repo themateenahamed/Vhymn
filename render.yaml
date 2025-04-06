@@ -1,7 +1,6 @@
 services:
   - type: web
     name: vhymn
-    env: python
-    buildCommand: "./build.sh"
-    startCommand: "gunicorn app:app"
-    pythonVersion: 3.10.13
+    env: docker
+    repo: https://github.com/themateenahamed/Vhymn
+    branch: main

@@ -11,6 +11,7 @@ WORKDIR /app
 # Install dependencies
 COPY pyproject.toml poetry.lock* /app/
 RUN pip install --upgrade pip
+RUN apt-get update && apt-get install -y ffmpeg
 RUN pip install poetry && poetry config virtualenvs.create false && poetry install --no-interaction --no-ansi
 
 # Copy project files
